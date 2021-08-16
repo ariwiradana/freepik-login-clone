@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+  <title>User login</title>
+</head>
+
+<body>
+
+  <div class="login__container">
+    <div class="login__card">
+      <div class="login__card-header">
+        <div class="login__header-title login__header-active" data-login="0">Sign Up</div>
+        <div class="login__header-title" data-login="1">Sign In</div>
+      </div>
+
+      <!-- sign up -->
+      <div class="login__card-body login__show">
+
+        <div class="login__btn-socials gap__1 mb_1">
+          <button class="btn btn__block btn__icon btn__google"><i class="uil uil-google"></i>Google</button>
+          <button class="btn btn__block btn__icon btn__facebook"><i class="uil uil-facebook-f"></i>Facebook</button>
+        </div>
+
+        <form action="" class="form__sign-up">
+          <div class="form__icon form__icon-left mb_1">
+            <i class="uil uil-user"></i>
+            <input type="text" class="form__input form__block" id="sign-up-username" placeholder="Username">
+          </div>
+
+          <div class="form__icon form__icon-left mb_1">
+            <i class="uil uil-envelope"></i>
+            <input type="text" class="form__input form__block" id="sign-up-email" placeholder="Email">
+          </div>
+
+          <div class="form__icon form__icon-right form__password mb_1">
+            <input type="password" class="form__input form__block" id="sign-up-password" placeholder="Password">
+            <i class="uil uil-eye input__password-toggle"></i>
+            <i class="uil uil-lock"></i>
+          </div>
+
+          <div class="form__checkbox mb_1">
+            <input type="checkbox" class="" name="" id="sign-up-remember">
+            <label>I do not wish to recivenews and promotions from Freepik Company by email</label>
+          </div>
+        </form>
+
+        <button class="btn btn__block btn__icon btn__primary" id="sign-up-btn">Sign Up</button>
+      </div>
+
+
+      <!-- sign in -->
+      <div class="login__card-body">
+
+        <div class="login__btn-socials gap__1 mb_1">
+          <button class="btn btn__block btn__icon btn__google"><i class="uil uil-google"></i>Google</button>
+          <button class="btn btn__block btn__icon btn__facebook"><i class="uil uil-facebook-f"></i>Facebook</button>
+        </div>
+
+        <form action="" class="form__sign-in">
+          <div class="form__icon form__icon-left mb_1">
+            <i class="uil uil-user"></i>
+            <input type="text" class="form__input form__block" id="sign-in-username" placeholder="Username or Email">
+          </div>
+  
+          <div class="form__icon form__icon-right form__password mb_1">
+            <input type="password" id="sign-in-password" class="form__input form__block" placeholder="Username">
+            <i class="uil uil-eye input__password-toggle"></i>
+            <i class="uil uil-lock"></i>
+          </div>
+  
+          <div class="forgot__password mb_1">
+            <a href="">Forgot your password?</a>
+          </div>
+        </form>
+
+        <button class="btn btn__block btn__icon btn__primary" id="sign-in-btn">Sign In</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../js/app.js"></script>
+  <script src="sign-in.js"></script>
+  <script src="sign-up.js"></script>
+
+</body>
+
+</html>

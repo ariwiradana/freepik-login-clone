@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --primaty-dark: #193555;
+  --primary: #1170ff;
+  --primary-alt: #1068ec;
+  --primary-disabled: #1068ec44;
+
+  --dark: #363636;
+  --dark-alt: #1f1f1f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* REUSABLE */
+.row {
+  display: flex;
+}
+
+.gap__1 button:not(:last-child) {
+  margin-right: .7rem;
+}
+
+.mb_1 {
+  margin-bottom: 0.8rem;
+}
+
+.mb_2 {
+  margin-bottom: 1.6rem;
+}
+
+/* BUTTON */
+.btn {
+  padding: .8rem 2.4rem;
+  font-weight: 600;
+  color: white;
+  outline: none;
+  border-radius: .2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn__block {
+  width: 100%;
+}
+
+.btn__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn__icon i::before {
+  margin-right: 0.4rem;
+  font-size: 18px;
+  color: white;
+}
+
+.btn__google {
+  background-color: rgb(224, 69, 58);
+}
+
+.btn__google:focus,
+.btn__google:hover {
+  background-color: rgb(212, 56, 44);
+  transition: .2s ease;
+}
+
+.btn__facebook {
+  background-color: rgb(83, 83, 168);
+}
+
+.btn__facebook:focus,
+.btn__facebook:hover {
+  background-color: rgb(68, 68, 158);
+  transition: .2s ease;
+}
+
+.btn__primary {
+  background-color: var(--primary);
+  transition: .2s ease;
+}
+
+.btn__primary:focus,
+.btn__primary:hover {
+  background-color: var(--primary-alt);
+  transition: .2s ease;
+}
+
+.btn__primary:disabled{
+  background-color: var(--primary-disabled);
+  transition: .2s ease;
+  cursor: unset;
+}
+
+/* FORM */
+.form__icon {
+  display: flex;
+  position: relative;
+}
+
+.form__block {
+  width: 100%;
+}
+
+.form__icon-left i::before {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #19355513;
+  border-top: solid 1px #19355548;
+  border-left: solid 1px #19355548;
+  border-bottom: solid 1px #19355548;
+  display: flex;
+  color: #193555c0;
+  justify-content: center;
+  align-items: center;
+  border-radius: .2rem 0 0 .2rem;
+}
+
+.form__icon-right i::before {
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #19355513;
+  border-top: solid 1px #19355548;
+  border-right: solid 1px #19355548;
+  border-bottom: solid 1px #19355548;
+  display: flex;
+  color: #193555c0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 .2rem .2rem 0;
+}
+
+.form__icon-left .form__input {
+  border: solid 1px #19355548;
+  border-radius: 0 .2rem .2rem 0;
+  padding-left: .8rem;
+  font-weight: 500;
+  font-size: 14px;
+  color: #193555c5;
+  outline: none;
+}
+
+.form__icon-right .form__input {
+  border: solid 1px #19355548;
+  border-radius: .2rem 0 0 .2rem;
+  padding-left: .8rem;
+  font-weight: 500;
+  font-size: 14px;
+  color: #193555c5;
+  outline: none;
+}
+
+.form__icon-right .input__password-toggle::before {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 3.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form__input::placeholder {
+  color: #19355548;
+}
+
+.form__checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form__checkbox input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.form__checkbox label {
+  margin-left: .8rem;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1a3f69;
+}
+
+.forgot__password {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.forgot__password a {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* LOGIN */
+.login__container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primaty-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__btn-socials {
+  display: flex;
+}
+
+.login__card {
+  width: 35vw;
+  height: auto;
+  background-color: white;
+  border-radius: .4rem;
+  overflow: hidden;
+  max-width: 70vw;
+}
+
+.login__card-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.login__header-title {
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  padding: 1.4rem;
+  font-weight: 600;
+  background-color: whitesmoke;
+  cursor: pointer;
+  color: #576f8d;
+  box-shadow: inset 0 0 2rem #19355557;
+  font-size: 18px;
+}
+
+.login__header-active {
+  background-color: white;
+  box-shadow: none;
+  color: var(--dark);
+}
+
+
+.login__card-body {
+  box-sizing: border-box;
+  padding: 3rem;
+  display: none;
+}
+
+.login__show {
+  display: block;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  .login__card {
+    width: 100vw;
+  }
+
+  .login__btn-socials {
+    flex-direction: column;
+  }
+
+  .login__btn-socials button:not(:last-child) {
+    margin-bottom: 0.8rem;
+    margin-right: 0 !important;
+  }
+
+  .login__card-body{
+    padding: 1.4rem;
+  }
+
+  .login__header-title{
+    font-size: 14px;
+    padding: 1rem .8rem;
+  }
+
+  .login__card{
+    max-width: 80vw;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 560px) {
+  .login__card {
+    width: 100vw;
+  }
+
+  .login__btn-socials {
+    flex-direction: column;
+  }
+
+  .login__btn-socials button:not(:last-child) {
+    margin-bottom: 0.8rem;
+    margin-right: 0 !important;
+  }
+
+  .login__card-body{
+    padding: 2.4rem;
+  }
+
+  .login__header-title{
+    font-size: 16px;
+    padding: 1.2rem 1rem;
+  }
+
+  .login__card{
+    max-width: 75vw;
+  }
+}
+
+@media screen and (min-width: 560px) and (max-width: 720px) {
+  .login__card {
+    width: 70vw;
+  }
+
+  .login__card-body{
+    padding: 2.4rem;
+  }
+
+  .login__header-title{
+    font-size: 16px;
+    padding: 1.2rem 1rem;
+  }
+
+  .login__card{
+    max-width: 75vw;
+  }
+}
+
+@media screen and (min-width: 720px) and (max-width: 880px) {
+  .login__card {
+    width: 60vw;
+  }
+
+  .login__card-body{
+    padding: 2.4rem;
+  }
+
+  .login__header-title{
+    font-size: 18px;
+    padding: 1.4rem 1rem;
+  }
+
+  .login__card{
+    max-width: 75vw;
+  }
+}
+
+@media screen and (min-width: 880px) and (max-width: 1100px) {
+  .login__card {
+    width: 50vw;
+  }
+
+  .login__card-body{
+    padding: 3rem;
+  }
+
+  .login__header-title{
+    font-size: 18px;
+    padding: 1.4rem 1rem;
+  }
+
+  .login__card{
+    max-width: 75vw;
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1225px) {
+  .login__card {
+    width: 40vw;
+  }
+
+  .login__card-body{
+    padding: 3rem;
+  }
+
+  .login__header-title{
+    font-size: 18px;
+    padding: 1.4rem 1rem;
+  }
+
+  .login__card{
+    max-width: 75vw;
+  }
+}
